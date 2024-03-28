@@ -6,6 +6,8 @@ function productsFetch(){
 }
 function* workGetPostsFetch(){
     const products = yield call(productsFetch);
+    //temp debug
+    console.log("saga running")
     yield put({type:GET_PRODUCTS_SUCCESS,products:products.products})
 }
 function* mySaga(){
