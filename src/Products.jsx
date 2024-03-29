@@ -6,7 +6,7 @@ import { Item } from "./Item";
 export default function Products({products}){
     // const products = useSelector(store=>store.myFirstReducer.products)
     return(
-        <ul className="bg-gray-300 rounded-sm p-5 mt-2">
+        <ul className="bg-gray-300 rounded-sm p-5 mt-2 block">
             {products.map(product=><Item key={product.id} product={product}></Item>)}
         </ul>
     )
