@@ -5,6 +5,7 @@ import Products from './Products'
 import { useEffect, useState } from 'react'
 import { Pagination } from './Pagination'
 import Search from './Search'
+import Header from './Header'
 // import { useEffect } from 'react'
 function App() {
   const dispatch = useDispatch()
@@ -32,9 +33,9 @@ function App() {
 
   return (
     <>
-      <p className='text-center text-3xl'>Fetch List of Products from Dummy-JSON</p>
       {/* <button className='m-auto block text-sm p-2 bg-gray-300 rounded-sm' type='button' onClick={()=>dispatch(getProductsFetch())}>Button</button> */}
       {/* {products.map(product=><p key={product.id}>{product.id} :{product.title}</p>)} */}
+      <Header></Header>
       <Search handleSearch={handleSearch} search={search}></Search>
       <Pagination totalProducts={filteredProducts.length} productsPerPage={productsPerPage} paginate={paginate}></Pagination>
       <Products products={currentProducts}></Products>
